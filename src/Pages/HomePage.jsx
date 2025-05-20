@@ -5,7 +5,6 @@ const [events, setEvents] = useState([]);
 const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulating an API call
     setTimeout(() => {
       const eventData = [
         { id: 1, name: "Music Festival", date: "2025-06-15" },
@@ -24,19 +23,19 @@ const [loading, setLoading] = useState(true);
     }, 2000);
   }, []);
     return (
-        <div style={{ textAlign: "center", padding: "20px" }}>
-        <h1>Event Planner</h1>
-        <p>Discover and plan events effortlessly!</p>
-  
-        {loading ? <p>Loading events...</p> : (
-          <ul>
+      <div className="event-planner-container">
+    <h1>Event Planner</h1>
+    <p>Discover and plan events effortlessly!</p>
+
+    {loading ? <p>Loading events...</p> : (
+        <ul className="event-list">
             {events.map(event => (
-              <li key={event.id} style={{ listStyle: "none", margin: "10px 0" }}>
-                <strong>{event.name}</strong> - <em>{event.date}</em>
-              </li>
+                <li key={event.id} className="event-item">
+                    <strong>{event.name}</strong> - <em>{event.date}</em>
+                </li>
             ))}
-          </ul>
-        )}
-      </div>
+        </ul>
+    )}
+</div>
     )
 }

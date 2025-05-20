@@ -4,5 +4,43 @@
   padding: 2rem;
   text-align: center;
 }
+.event-planner-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
+.event-planner-container h1 {
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.event-planner-container p {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.event-list {
+  padding: 0;
+  list-style: none;
+}
+
+.event-item {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.event-item strong {
+  font-size: 1.1rem;
+  color: #007bff;
+}
+
+.event-item em {
+  color: #28a745;
+}
 
