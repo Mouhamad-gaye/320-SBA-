@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+
 export default function TaskPage() {
     const [tasks, setTasks] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -39,7 +40,15 @@ export default function TaskPage() {
             {loading ? <p>Loading tasks...</p> : (
                 <ul>
                     {tasks.map(task => (
-                        <li key={task.id} style={{ listStyle: "none", margin: "10px 0", margin: 10, padding: 10,backgroundColor: "lightGray",borderRadius: 5, display: "flex", justifyContent: "space-between"}}>
+                        <li key={task.id} style={{ 
+                            listStyle: "none", 
+                            margin: "10px 0", 
+                            margin: 10, 
+                            padding: 10,
+                            backgroundColor: "lightGray",
+                            borderRadius: 5, 
+                            display: "flex", 
+                            justifyContent: "space-between"}}>
                             <input
                                 type="checkbox"
                                 checked={task.completed}
