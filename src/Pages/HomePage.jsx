@@ -5,8 +5,8 @@ const [events, setEvents] = useState([]);
 const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      const eventData = [
+
+    const eventData = [
         { id: 1, name: "Music Festival", date: "2025-06-15" },
         { id: 2, name: "Tech Conference", date: "2025-07-10" },
         { id: 3, name: "Art Exhibition", date: "2025-08-05" },
@@ -20,7 +20,6 @@ const [loading, setLoading] = useState(true);
       ];
       setEvents(eventData);
       setLoading(false);
-    }, 2000);
   }, []);
     return (
       <div className="event-planner-container">
