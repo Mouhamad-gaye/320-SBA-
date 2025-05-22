@@ -17,3 +17,19 @@ export default function NavBar() {
     )
 }
 
+//   useEffect(() => {
+//     const fetchEvents = async () => {
+//         try {
+//             const response = await axios.get(`https://www.eventbriteapi.com/v3/users/me/?token=5LY5NNRPZ3AGBNFXFYUS`);
+//             setEvents(response.data); // Assuming response contains event data
+//         } catch (error) {
+//             console.error("Error fetching events:", error);
+//         } finally {
+//             setNewEvent(false);
+//         }
+//     };
+
+//     fetchEvents();
+// }, []);
+
+

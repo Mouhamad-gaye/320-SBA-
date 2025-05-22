@@ -1,44 +1,58 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-
+import { useState } from "react";
+import '../App.css'
 
 export default function HomePage() {
-    const [events, setEvents] = useState([]);
-    const [loading, setLoading] = useState(true);
+  const [events, setEvents] = useState([]);
+  const [newEvent, setNewEvent] = useState({ name: "", date: "", location: "" });
 
-    let apiKey = "5LY5NNRPZ3AGBNFXFYUS"
-    let apiUrl = `https://www.eventbriteapi.com/v3/users/me/?token=5LY5NNRPZ3AGBNFXFYUS`
+  // Handle form input changes
+  const handleChange = (e) => {
+    setNewEvent({ ...newEvent, [e.target.name]: e.target.value });
+  };
 
-   
-        useEffect(() => {
-            const fetchEvents = async () => {
-                try {
-                    const response = await axios.get(apiUrl);
-                    setEvents(response.data); // Assuming response contains event data
-                } catch (error) {
-                    console.error("Error fetching events:", error);
-                } finally {
-                    setLoading(true);
-                }
-            };
-    
-            fetchEvents();
-        }, []);
-    return (
-        <div className="event-planner-container">
-            <h1>Event Planner</h1>
-            <p>Discover and plan events effortlessly!</p>
+  // Add event to list
+  const addEvent = () => {
+    if (newEvent.name && newEvent.date && newEvent.location) {
+      setEvents([...events, { id: Date.now(), ...newEvent }]);
+      setNewEvent({ name: "", date: "", location: "" }); // Clear form
+    }
+  };
 
-            {loading ? <p>Loading events...</p> : (
-                <ul className="event-list">
-                    {events.map(event => (
-                        <li key={event.id} className="event-item">
-                            <strong>{event.name}</strong>
-                            <em>{}</em>
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </div>
-    )
+
+  return (
+    <div className="event-planner-container">
+      <h1>Plan Your Own Event</h1>
+
+      {/* Event Creation Form */}
+      <div className="event-form">
+        <input type="text" name="name" placeholder="Event Name" value={newEvent.name} onChange={handleChange} />
+        <input type="date" name="date" value={newEvent.date} onChange={handleChange} />
+        <input type="text" name="location" placeholder="Location" value={newEvent.location} onChange={handleChange} />
+        <button onClick={addEvent}>Create Event</button>
+      </div>
+
+      {/* Display Created Events */}
+      <h2>Your Events</h2>
+      <ul className="event-list">
+        {events.map((event) => (
+          <li key={event.id} className="event-item">
+            <strong>{event.name}</strong> - <em>{event.date}</em> at {event.location}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

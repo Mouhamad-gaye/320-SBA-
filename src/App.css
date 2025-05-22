@@ -104,3 +104,75 @@
   border-radius: 5px;
 }
 
+/* Main container */
+.event-planner-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.event-planner-container h1 {
+  color: #333;
+  font-size: 24px;
+}
+
+/* Form styles */
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.event-form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.event-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.event-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Event list */
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-item {
+  background-color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Event details */
+.event-item strong {
+  color: #333;
+  font-size: 18px;
+}
+
+.event-item em {
+  color: #555;
+  font-style: italic;
+}
+

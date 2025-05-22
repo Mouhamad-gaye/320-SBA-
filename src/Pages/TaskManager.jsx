@@ -3,20 +3,20 @@ import { useState } from "react";
 
 export default function TaskManager() {
     const [tasks, setTasks] = useState([
-        { id: 1, name: "Book venue", completed: false },
-        { id: 2, name: "Send invitations", completed: false },
-        { id: 3, name: "Arrange catering", completed: false },
-        { id: 4, name: "Plan event schedule", completed: false },
-        { id: 5, name: "Secure venue", completed: false },
-        { id: 6, name: "Book performers", completed: false },
-        { id: 7, name: "Prepare speaker lineup", completed: false },
-        { id: 8, name: "Arrange tech equipment", completed: true },
-        { id: 9, name: "Set up gallery space", completed: false },
-        { id: 10, name: "Coordinate with artists", completed: false },
-        { id: 11, name: "Plan food vendors", completed: true },
-        { id: 12, name: "Organize ticket sales", completed: false },
-        { id: 13, name: "Invite authors", completed: false },
-        { id: 14, name: "Arrange book signings", completed: false }
+        // { id: 1, name: "Book venue", completed: false },
+        // // { id: 2, name: "Send invitations", completed: false },
+        // // { id: 3, name: "Arrange catering", completed: false },
+        // // { id: 4, name: "Plan event schedule", completed: false },
+        // // { id: 5, name: "Secure venue", completed: false },
+        // // { id: 6, name: "Book performers", completed: false },
+        // // { id: 7, name: "Prepare speaker lineup", completed: false },
+        // // { id: 8, name: "Arrange tech equipment", completed: true },
+        // // { id: 9, name: "Set up gallery space", completed: false },
+        // // { id: 10, name: "Coordinate with artists", completed: false },
+        // // { id: 11, name: "Plan food vendors", completed: true },
+        // // { id: 12, name: "Organize ticket sales", completed: false },
+        // // { id: 13, name: "Invite authors", completed: false },
+        // // { id: 14, name: "Arrange book signings", completed: false }
     ]);
   
     const [newTask, setNewTask] = useState("");
