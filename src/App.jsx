@@ -11,20 +11,19 @@ import NotFoundPage from './Pages/NotFoundPage'
 import TaskManager from './Pages/TaskManager'
 
 function App() {
- 
+
 
   return (
     <>
-    <NavBar />
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/taskedit" element={<TaskManager />} />
-      <Route path="/budget" element={<BudgetPage />} />
-      <Route path="/design" element={<EventDesign />} />
-      
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/taskedit" element={<TaskManager />} />
+        <Route path="/budget" element={<BudgetPage />} />
+        <Route path="/design" element={<EventDesign />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
     </>
   )
 }
